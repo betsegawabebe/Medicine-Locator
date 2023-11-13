@@ -11,7 +11,9 @@ function UserInfo() {
   // const dispatch = useDispatch();
   // const navigate = useNavigate();
   const [mode] = useLocalStorage("mode", "dark");
-
+localStorage.setItem('name','admin')
+localStorage.setItem('email','admin@mail.com')
+localStorage.setItem('role','admin')
   return (
     <>
       <Flex
@@ -85,20 +87,20 @@ function UserInfo() {
                 setShowUserInfo(!showUserInfo);
               }}
             >
-              Juba Pharmacy
-              {/* {localStorage.getItem("name")} */}
+            
+            {localStorage.getItem("name")}
             </Text>
             <Text
               color={"#303030"}
               fontFamily={"Poppins"}
-              fontSize={2}
-              fontWeight={3}
+              fontSize={1}
+              fontWeight={1}
               lineHeight={1}
               onClick={() => {
                 setShowUserInfo(false);
               }}
             >
-              {/* {localStorage.getItem("email")} */}
+            {localStorage.getItem("email")}
             </Text>
           </Flex>
           <Flex

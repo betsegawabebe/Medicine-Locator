@@ -4,7 +4,7 @@ import { getMenu } from "../../../../utils/getMenu";
 import { MenuListProp } from "../SideBar/types";
 
 function MenuList({ setshowMenu }: MenuListProp) {
-    const role = "admin";
+    const role = localStorage.getItem('role');
     return (
       <>
         <Box height={"100%"} width={"100%"}>

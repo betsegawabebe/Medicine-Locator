@@ -6,17 +6,18 @@ import { ISideBarMenu, SideBarMenuProp } from "./types";
 
 
  function SideBarMenu(props: SideBarMenuProp) {
-    // const role = useSelector(selectRole);
+    const role = localStorage.getItem('role');
     return (
       <Flex
         flexDirection={"column"}
         height={"90%"}
         overflow={"auto"}
         p={1}
-        pt={2}
+        pt={1}
+        pl={2}
         style={{ gap: "10px" }}
       >
-        {getMenu('role')?.map((menuItem: ISideBarMenu, index: number) => {
+        {getMenu(role)?.map((menuItem: ISideBarMenu, index: number) => {
           return (
             <SideBarMenuItem
               isCollapsed={props.isCollapsed}

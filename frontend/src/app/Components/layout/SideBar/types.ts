@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface SideBarMenuProp {
     isCollapsed: boolean;
     setIsCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
@@ -16,6 +18,6 @@ export interface SideBarMenuProp {
   export interface ISideBarMenu {
     label: string;
     to: string;
-  //   icon: IconType;
+    icon: IconType;
     onClick?: () => void;
   }

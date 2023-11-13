@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, Text } from "../../ui/Blocks";
+import { Box, Flex, Text } from "../../ui/Blocks";
 import Modal from "../../ui/Modal";
 import { Cross2Icon, RowsIcon } from "@radix-ui/react-icons";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
@@ -7,7 +7,7 @@ import useLocalStorage from "use-local-storage";
 import MenuList from "./menu";
 import UserInfo from "./userInfo";
 import { SideBar } from "../SideBar/sideBar";
-
+import logo from "../../../../assets/images/Medicine Locator (1).png";
 // import { useDefaultLayoutSlice } from 'app/layouts/DefaultLayout/slice';
 // import Modal from '../Bloc ks/Modal';
 // import { useMediaQuery } from 'react-responsive';
@@ -39,17 +39,17 @@ function Header() {
           justifyContent={"space-between"}
           mx={3}
           width={["100%", "97vw"]}
-        >
-          <Text
-            color={mode == "dark" ? "#f7f9fc" : "black"}
-            display={["none", "none", "block"]}
-            fontSize={"22px"}
-            fontWeight={7}
-            ml={5}
-          >
-            <Text fontWeight={4}>Medicine</Text>
-            Locator
-          </Text>
+        >MLS
+          {/* <Box width={"60px"} height={"60px"}>
+            <img
+              src={logo}
+              style={{
+                width: "100%",
+                height: "100%",
+               
+              }}
+            />
+          </Box> */}
           <Text
             color={"white"}
             display={["block", "block", "none"]}
